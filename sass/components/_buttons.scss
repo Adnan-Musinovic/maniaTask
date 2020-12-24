@@ -1,0 +1,45 @@
+.cta {
+    display: inline-block;
+    background-color: $white;
+    color: $light-blue;
+    font-size: 1.6rem;
+    padding: 1.6rem 3.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0%;
+        bottom: 0%;
+        height: 100%;
+        width: 100%;
+        background-color: $light-blue;
+        z-index: -1;
+        transform: translateY(100%);
+        transition: all .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+    }
+
+    &:hover {
+        color: $white;
+        &::after {
+            transform: translateY(0%);
+        }
+    }
+}
+
+.btn {
+    background-color: $very-dark-blue;
+    color: $white;
+    cursor: pointer;
+    border: none;
+    font-size: 1.6rem;
+    padding: 1.6rem 3.2rem;
+    outline-width: 0;
+    text-transform: uppercase;
+    width: 80%;
+}

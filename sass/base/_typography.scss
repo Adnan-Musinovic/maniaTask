@@ -1,0 +1,47 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: $dark-grey;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+}
+
+.hero {
+    color: $white;
+
+    &--heading {
+        font-size: 8.4rem;
+        margin-bottom: 4rem;
+        font-weight: 300;
+        position: relative;
+        padding-left: 4rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            height: 100%;
+            width: 2rem;
+            background-color: $light-blue;
+        }
+    }
+
+    &--p {
+        font-size: 3.2rem;
+        font-weight: lighter;
+        margin-bottom: 4rem;
+    }
+
+}
+
+.about {
+    & p {
+        line-height: 1.4;
+        &:not(:last-child) {
+            margin-bottom: 4.5rem;
+        }
+    }
+}

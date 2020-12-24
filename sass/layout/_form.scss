@@ -1,0 +1,27 @@
+.termin {
+    & .form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 3.5rem;
+
+        & input[type="text"],
+        & input[type="email"],
+        & input[type="tel"],
+        & input[type="date"] {
+            background-color: transparent;
+            border: none;
+            border: .1rem solid $dark-grey;
+            margin-bottom: 1.6rem;
+            outline-width: 0;
+            height: 5rem;
+            padding: 0rem 1rem;
+            transition: all .3s ease;
+
+            &:focus {
+                border: .2rem solid $dark-grey;
+            }
+        }
+    }
+}

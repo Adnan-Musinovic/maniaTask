@@ -1,0 +1,33 @@
+.header {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    width: 100%;
+
+    & .menu {
+        background-color: $white;
+        height: 6rem;
+        width: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        transition: all .5s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+        &__line {
+            background-color: $light-blue;
+            height: .2rem;
+            width: 2rem;
+
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+
+    & .social {
+        transition: all .5s cubic-bezier(0.47, 0, 0.745, 0.715);
+    }
+}
