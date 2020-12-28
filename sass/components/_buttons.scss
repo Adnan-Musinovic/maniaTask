@@ -43,3 +43,18 @@
     text-transform: uppercase;
     width: 80%;
 }
+
+.btn-arrow {
+    background-color: transparent;
+    color: $light-blue;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    font-size: 2rem;
+    outline-width: 0;
+    padding: 1rem;
+
+    &:active {
+        transform: scale(0.9);
+    }
+}

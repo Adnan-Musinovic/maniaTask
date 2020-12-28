@@ -8,6 +8,19 @@ body {
     font-size: 1.6rem;
 }
 
+.social {
+    & a {
+        color: $white;
+        font-size: 1.6rem;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+    }
+}
+
 .hero {
     color: $white;
 
@@ -44,4 +57,31 @@ body {
             margin-bottom: 4.5rem;
         }
     }
+
+    & .name {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: $very-dark-blue;
+        margin-bottom: 1.5rem;
+    }
+
+    & .title {
+        color: $light-blue;
+        text-transform: uppercase;
+        margin-bottom: 3.6rem;
+    }
+
+    & .slider--text {
+        font-size: 1.4rem;
+        line-height: 1.7;
+    }
+}
+
+.info {
+    color: $white;
+
+    & h2 {
+        line-height: 1.5;
+    }
+
 }
