@@ -83,5 +83,54 @@ body {
     & h2 {
         line-height: 1.5;
     }
+}
 
+.description {
+    & h5 {
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: $very-dark-blue;
+        margin-bottom: 5rem;
+    }
+
+    & p {
+        font-size: 1.4rem;
+        line-height: 1.7;
+
+        &:not(:last-child) {
+            margin-bottom: 3.5rem;
+        }
+    }
+}
+
+.text {
+    &--small {
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 2;
+    }
+}
+
+.referenzen {
+    &__box__info {
+        & .name {
+            color: $dark-blue;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.6rem;
+            text-transform: capitalize;
+            margin-bottom: .5rem;
+        }
+
+        & .city {
+            color: $light-blue;
+            font-size: 1.4rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.newsletter {
+    color: $white;
 }

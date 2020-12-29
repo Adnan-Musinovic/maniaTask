@@ -154,6 +154,7 @@
     & .grid {
         grid-template-rows: 10rem 16rem 19rem 8.5rem 20rem 13rem auto 30rem 30rem;
         gap: 1.5rem;
+        padding-bottom: 10rem;
 
         &__item {
             overflow: hidden;
@@ -233,11 +234,13 @@
     }
 }
 
-/*.slider-section {
+.slider-section {
     .slider__container {
         display: grid;
-        grid-template-columns: repeat(16, 1fr);
+        grid-template-columns: repeat(13, 1fr);
         grid-template-rows: 10rem 10rem auto 10rem 10rem;
+        width: 80%;
+        position: relative;
 
         & img {
             height: 100%;
@@ -247,24 +250,25 @@
 
         & .img-top {
             grid-column: 1 / 10;
-            grid-row: 2 / 6;
+            grid-row: 2 / 5;
             position: relative;
             z-index: 2;
         }
 
         & .img-bottom {
-            grid-column: 2 / 12;
+            grid-column: 3 / 12;
             grid-row: 1 / 7;
             position: relative;
             z-index: 1;
         }
 
         & .description {
-            grid-column: 8 / 17;
+            grid-column: 7 / 14;
             grid-row: 3 / 4;
             background-color: $white;
             position: relative;
             z-index: 3;
+            padding: 5rem;
         }
     }
-}*/
+}
