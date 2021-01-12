@@ -1,5 +1,5 @@
 .termin {
-    & .form {
+    &__form {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -22,6 +22,100 @@
             &:focus {
                 border: .2rem solid $dark-grey;
             }
+        }
+    }
+}
+
+.newsletter {
+    &-form {
+        margin-top: 6.5rem;
+        display: flex;
+        
+        
+        & input[type="email"] {
+            background-color: transparent;
+            border: none;
+            border: .1rem solid $white;
+            color: $white;
+            font-size: 1.6rem;
+            font-weight: 300;
+            height: 6rem;
+            letter-spacing: .1rem;
+            outline-width: 0rem;
+            padding: 1.6rem;
+            width: 39.5rem;
+
+            &::placeholder {
+                color: $white;
+            }
+        }
+
+        & button {
+            background-color: $white;
+            border: none;
+            color: $light-blue;
+            cursor: pointer;
+            height: 6rem;
+            outline-width: 0rem;
+            padding: 1.6rem;
+            width: 8.8rem;
+        }
+    }
+}
+
+.footer {
+    &__form {
+        width: 90%;
+        &--top,
+        &--mid,
+        &--bottom {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        & input[type="text"],
+        & input[type="email"],
+        & input[type="tel"] {
+            background-color: transparent;
+            border: none;
+            border: 1px solid $white;
+            color: $white;
+            padding: 1.6rem;
+            outline-width: 0;
+            width: 50%;
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+
+        & textarea {
+            background-color: transparent;
+            border: none;
+            border: .1rem solid $white;
+            color: $white;
+            outline-width: 0;
+            width: 80%;
+            height: 10rem;
+            padding: 1.6rem;
+        }
+
+        & button {
+            background-color: $white;
+            color: $light-blue;
+            cursor: pointer;
+            border: none;
+            font-size: 1.6rem;
+            padding: 1.6rem 3.2rem;
+            outline-width: 0;
+            text-transform: uppercase;
+            width: 20%;
+        }
+
+        & ::placeholder {
+            color: $white;
+            text-transform: capitalize;
+            font-family: sans-serif;
         }
     }
 }

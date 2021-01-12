@@ -7,3 +7,12 @@
     height: 100%;
     width: 100%;
 }
+
+@mixin heading-line {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 2rem;
+    background-color: $light-blue;
+}

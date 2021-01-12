@@ -8,6 +8,7 @@
     width: 56rem;
     transition: all .5s cubic-bezier(0.47, 0, 0.745, 0.715);
     transform: translateX(-100%);
+    z-index: 89;
 
     & ul {
         display: flex;

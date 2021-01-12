@@ -2,8 +2,18 @@
     position: absolute;
     top: 0%;
     left: 0%;
-    z-index: 2;
+    z-index: 88;
     width: 100%;
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &--fixed {
+        background-color: $light-blue;
+        position: fixed;
+        //transform: translateY(-100%);
+        transition: all .5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    }
 
     & .menu {
         background-color: $white;
@@ -20,6 +30,25 @@
             background-color: $light-blue;
             height: .2rem;
             width: 2rem;
+            transition: all .3s ease-in-out;
+
+            &--top--open,
+            &--mid--open,
+            &--bottom--open {
+                transition: all .3s ease-in-out;
+            }
+
+            &--top--open {
+                transform: rotate(45deg) translateX(.2rem) translateY(.4rem);
+            }
+
+            &--mid--open {
+                opacity: 0;
+            }
+
+            &--bottom--open {
+                transform: rotate(-45deg) translateX(.5rem) translateY(-.8rem);
+            }
 
             &:not(:last-child) {
                 margin-bottom: .5rem;

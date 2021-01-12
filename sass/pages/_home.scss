@@ -2,10 +2,12 @@
     height: 100%;
     width: 100%;
     position: relative;
+    z-index: 5;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     overflow: hidden;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 36% 100%, 0 95%);
 
     & img {
         height: 100%;
@@ -44,10 +46,12 @@
 
 .about {
     position: relative;
-    z-index: 1;
+    z-index: 3;
+    margin-top: -5.5rem;
 
     & .atr,
-    & .abr {
+    & .abr,
+    & .alc {
         position: absolute;
     }
 
@@ -63,8 +67,17 @@
         right: 6.5rem;
         height: 37rem;
         width: 37rem;
-        z-index: 1;
+        //z-index: 1;
     }
+
+    & .alc {
+        top: 50%;
+        left: 0%;
+        width: 20rem;
+        height: 15rem;
+        z-index: 3;
+    }
+
     &__bg {
         background-color: $white;
     }
@@ -81,6 +94,11 @@
             width: .1rem;
             background-color: $light-blue;
         }
+    }
+
+    &--img {
+        opacity: 0;
+        transition: all .5s ease-in-out;
     }
 
     & img {
@@ -107,23 +125,51 @@
         position: absolute;
         top: -35%;
         right: -25%;
-        z-index: -1;
+        z-index: 1;
         transform: translateX(50%);
     }
 }
 
 .info {
     background-color: $white;
+    position: relative;
+    overflow: hidden;
+
+    & .iml,
+    & .imr {
+        position: absolute;
+        top: 40%;
+        z-index: 6;
+    }
+
+    & .iml {
+        left: -13%;
+        height: 15rem;
+        width: 37rem;
+    }
+
+    & .imr {
+        right: -10%;
+        height: 37rem;
+        width: 37rem;
+    }
+
+
     & ul {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         flex-direction: column;
-        height: 100%;
     }
 
     & li {
         list-style: none;
+    }
+
+    &--list--item {
+        opacity: 0;
+        transform: translateY(-25px);
+        transition: all .3s ease-in-out;
     }
 }
 
@@ -133,7 +179,7 @@
     
     & .container {
         display: grid;
-        grid-template-columns: repeat(4, 80%);
+        grid-template-columns: repeat(4, 90%);
         justify-content: space-between;
         align-items: center;
         width: 90%;
@@ -167,7 +213,6 @@
     }
 
     &__top {
-        background-color: lightgreen;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -192,8 +237,8 @@
         &__info {
             position: absolute;
             left: 5rem;
-            bottom: -9.5rem;
-            padding: 7.5rem 2.5rem 2.5rem 2.5rem;
+            bottom: -5rem;
+            padding: 2.5rem 0rem 0rem 2.5rem;
 
             &::before {
                 content: '';
@@ -278,4 +323,14 @@
         width: 100%;
         background-image: linear-gradient(to right, rgba($dark-blue, 1), rgba($dark-blue, .2));
     }
+}
+
+#referenzen-slider {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    cursor: grab;
+}
+
+.referenzen__box {
+    height: auto;
 }

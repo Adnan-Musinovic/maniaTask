@@ -1,0 +1,107 @@
+.footer {
+    background-image: url(../../images/footer-bg.jpg);
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        left: 0%;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($black, .75);
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 10rem;
+
+        &--left,
+        &--right {
+            width: 50%;
+        }
+
+        &--left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &--right {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 3.6rem;
+
+        & a {
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-right: 2.5rem;
+            }
+        }
+    }
+
+    &__mid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 5rem 0rem;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & p,
+        & a {
+            display: flex;
+            align-items: center;
+
+            & img {
+                height: 1.8rem;
+                width: 2rem;
+                fill: $light-blue;
+                margin-right: 1.2rem;
+            }
+        }
+
+        & p {
+            margin-right: 1.2rem;
+        }
+    }
+
+    &__bottom {
+        background-color: $black;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 0rem;
+        color: $white;
+        font-weight: 300;
+    }
+
+    &__social {
+        display: flex;
+    }
+}
