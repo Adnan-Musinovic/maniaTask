@@ -118,10 +118,14 @@
             height: 100%;
         }
 
-        &__img img{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+        &__img {
+            background-color: $white;
+
+            & img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
         }
 
         &__description {
@@ -161,6 +165,8 @@
             margin-left: 20rem;
             position: relative;
             z-index: 2;
+            overflow: hidden;
+            user-select: none;
         }
 
         &__controls {
@@ -172,6 +178,7 @@
             align-items: center;
 
             & .dot__container {
+                user-select: none;
 
                 & .info--dot {
                     display: inline-block;

@@ -199,3 +199,11 @@ function showSlides(n) {
 
 let btnInfoLeft = document.querySelector('#infoBtnLeft');
 let btnInfoRight = document.querySelector('#infoBtnRight');
+
+btnInfoLeft.addEventListener('click', ()=> {
+    plusSlides(-1);
+})
+
+btnInfoRight.addEventListener('click', ()=> {
+    plusSlides(+1);
+})
