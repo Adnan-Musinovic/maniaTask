@@ -1,5 +1,9 @@
 html {
     font-size: 62.5%;
+
+    @media only screen and(max-width: $small-devices) {
+        font-size: 55%;
+    }
 }
 
 body {
@@ -274,5 +278,20 @@ body {
                 margin-bottom: 1.6rem;
             }
         }
+    }
+}
+
+.termin {
+    &--heading {
+        color: $dark-grey;
+        font-size: 3.4rem;
+        line-height: 1.5;
+        margin-bottom: 3rem;
+    }
+
+    &--paragraph {
+        color: $dark-grey;
+        font-size: 1.8rem;
+        line-height: 1.6;
     }
 }

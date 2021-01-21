@@ -13,11 +13,11 @@
             background-color: transparent;
             border: none;
             border: .1rem solid $dark-grey;
-            margin-bottom: 1.6rem;
+            margin-bottom: 2rem;
             outline-width: 0;
             height: 5rem;
             padding: 0rem 1rem;
-            transition: all .3s ease;
+            //transition: all .3s ease;
 
             &:focus {
                 border: .2rem solid $dark-grey;
@@ -66,11 +66,20 @@
 .footer {
     &__form {
         width: 90%;
+
+        @media only screen and(max-width: $large-devices) {
+            width: 70%;
+        }
+
         &--top,
         &--mid,
         &--bottom {
             display: flex;
             margin-bottom: 1rem;
+
+            @media only screen and(max-width: $large-devices) {
+                width: 100%;
+            }
         }
 
         & input[type="text"],

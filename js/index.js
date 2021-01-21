@@ -4,7 +4,6 @@ window.addEventListener('load', ()=> {
     let heroText = document.querySelectorAll('.hero--animation');
 
     loader.style.transform = 'translateX(100%)';
-    loader.style.opacity = '0';
 
     for(let i = 0; i < heroText.length; i++) {
         setTimeout(() => {
@@ -21,19 +20,25 @@ const menuLineMid = document.querySelector('.menu__line--mid');
 const menuLineBottom = document.querySelector('.menu__line--bottom');
 const nav = document.querySelector('.nav');
 const social = document.querySelector('.social');
+let navWidth = nav.getBoundingClientRect();
+const overlay = document.querySelector('.overlay');
 
 menu.addEventListener('click', ()=> {
     nav.classList.toggle('nav--open');
 
     if(nav.classList.contains('nav--open')){
-        menu.style.marginLeft = '560px';
-        social.style.marginLeft = '50px';
+        overlay.style.visibility = 'visible';
+
+        menu.style.left = Math.round(navWidth.width) + 'px';
+        social.style.marginLeft = Math.round(navWidth.width) + 'px';
 
         menuLineTop.classList.add('menu__line--top--open');
         menuLineMid.classList.add('menu__line--mid--open');
         menuLineBottom.classList.add('menu__line--bottom--open');
     } else {
-        menu.style.marginLeft = '0px';
+        overlay.style.visibility = 'hidden';
+
+        menu.style.left = '0px';
         social.style.marginLeft = '0px';
 
         menuLineTop.classList.remove('menu__line--top--open');

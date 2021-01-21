@@ -33,7 +33,6 @@
 }
 
 .btn {
-    background-color: $very-dark-blue;
     color: $white;
     cursor: pointer;
     border: none;
@@ -41,7 +40,22 @@
     padding: 1.6rem 3.2rem;
     outline-width: 0;
     text-transform: uppercase;
-    width: 80%;
+    background-color: $white;
+
+    &--full {
+        @extend .btn;
+        background-color: $very-dark-blue;
+    }
+
+    &--grey {
+        background-color: $grey
+    }
+
+    & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 .btn-arrow {
